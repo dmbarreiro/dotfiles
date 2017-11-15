@@ -26,4 +26,18 @@ source ~/.vim/vimrc
 source-file ~/.tmux/tmux.conf
 ```
 
-That's it, you are done.
+4. Install [Tmux Plugin Manager](github.com/tmux-plugins/tpm):
+
+```
+git clone git://github.com/tmux-plugins/tpm ~/.tmux/plugins
+```
+
+5. Install [vim-plug](https://github.com/junegunn/vim-plug):
+
+```
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+That's it, you just have to install plugins using the plugin managers.
+
