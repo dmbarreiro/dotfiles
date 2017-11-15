@@ -15,7 +15,7 @@ nmap <Leader>so :so %<CR>
 call plug#begin('~/.vim/bundle')
 
 " plugin configs stored on a separate file
- source ~/.vim/config/plugins.vim
+ source ~/.plugins.vim
 
 call plug#end()
 
