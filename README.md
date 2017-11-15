@@ -11,28 +11,16 @@ your ~/.vimrc and ~/.tmux.conf files.
 
 ```bash
 cd ~
-git clone git://github.com/dmbarreiro/dotfiles
+git clone git://github.com/dmbarreiro/dotfiles .
 ``` 
 
-2. Add the following line in your ~/.vimrc:
-
-```
-source ~/.vim/vimrc
-```
-
-3. Add the following line in your ~/.tmux.conf:
-
-```
-source-file ~/.tmux/tmux.conf
-```
-
-4. Install [Tmux Plugin Manager](github.com/tmux-plugins/tpm):
+2. Install [Tmux Plugin Manager](github.com/tmux-plugins/tpm):
 
 ```
 git clone git://github.com/tmux-plugins/tpm ~/.tmux/plugins
 ```
 
-5. Install [vim-plug](https://github.com/junegunn/vim-plug):
+3. Install [vim-plug](https://github.com/junegunn/vim-plug):
 
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
