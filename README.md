@@ -4,14 +4,15 @@ Personal configuration files for development in Linux. Copied stuff from [Justin
 
 ## Manual Installation
 
-Before installing anything I recomend you backup your current ~/.vim and ~/.tmux folders and
-your ~/.vimrc and ~/.tmux.conf files.
+Before installing anything I recomend you backup your current ~/.vimrc and ~/.tmux.conf files.
 
-1. Clone this repository in your home folder:
+1. Clone this repository and overwrite the files in your home directory:
 
 ```bash
 cd ~
-git clone git://github.com/dmbarreiro/dotfiles .
+git clone git://github.com/dmbarreiro/dotfiles
+cp dotfiles/.* .
+rm -rf dotfiles/
 ``` 
 
 2. Install [Tmux Plugin Manager](github.com/tmux-plugins/tpm):
