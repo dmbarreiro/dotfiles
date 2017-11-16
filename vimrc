@@ -99,6 +99,8 @@ noremap <C-n> :NERDTreeToggle<CR>
 inoremap jj <Esc>
 " vv creates new vertical split in normal mode
 nnoremap <silent> vv <C-w>v
+" vs creates new horizontal split in normal mode
+nnoremap <silent> vs <C-w>s
 " in diff mode we use the spell check keys for merging
 if &diff
   ” diff settings
