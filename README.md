@@ -4,30 +4,65 @@ Personal configuration files for development in Linux. Copied stuff from [Justin
 
 ## Manual Installation
 
-Before installing anything I recomend you backup your current ~/.vimrc and ~/.tmux.conf files.
+I recomend you backup your current ~/.vimrc and ~/.tmux.conf files before
+starting the installation process.
 
-1. Clone this repository and execute installation bash script:
+Clone repository and execute installation script:
 
 ```bash
 git clone git://github.com/dmbarreiro/dotfiles
-sh dotfiles/install.sh
+sh dotfiles/install_complete.sh
 ``` 
 
-2. Install [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm):
+Install plugins using the plugin managers.
+
+## Manual Installation
+
+I recomend you backup your current ~/.vimrc and ~/.tmux.conf files before
+starting the installation process.
+
+1. Clone this repository:
+
+```
+git clone git://github.com/dmbarreiro/dotfiles
+``` 
+
+2. Source repository configurations from your present configuration files:
+
+.vimrc
+``` 
+source /path/dotfiles/vimrc
+``` 
+
+.tmux.conf
+``` 
+source-file /path/dotfiles/tmux.conf
+``` 
+
+3. Copy configuration files to their expected locations:
+
+```bash
+cp /path/dotfiles/plugins.vim ~/.plugins.vim
+``` 
+
+4. Install [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm):
 
 ```
 git clone git://github.com/tmux-plugins/tpm ~/.tmux/plugins
 ```
 
-3. Install [vim-plug](https://github.com/junegunn/vim-plug):
+5. Install [vim-plug](https://github.com/junegunn/vim-plug):
 
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-That's it, you just have to install plugins using the plugin managers.
+Install plugins using the plugin managers.
 
 ## Update configuration
 
-Just pull the last version from the repository and execute again install.sh.
+Just pull the last version from the repository and execute the 
+installation process.
+
+
