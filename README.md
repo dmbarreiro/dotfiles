@@ -13,7 +13,7 @@ git clone git://github.com/dmbarreiro/dotfiles
 sh dotfiles/install.sh
 ``` 
 
-2. Install [Tmux Plugin Manager](github.com/tmux-plugins/tpm):
+2. Install [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm):
 
 ```
 git clone git://github.com/tmux-plugins/tpm ~/.tmux/plugins
