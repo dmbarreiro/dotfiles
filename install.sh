@@ -1,4 +1,4 @@
-~#!/bin/sh
+#!/bin/sh
 
 cp vimrc ~/.vimrc
 cp plugins.vim ~/.plugins.vim
