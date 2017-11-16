@@ -6,13 +6,11 @@ Personal configuration files for development in Linux. Copied stuff from [Justin
 
 Before installing anything I recomend you backup your current ~/.vimrc and ~/.tmux.conf files.
 
-1. Clone this repository and overwrite the files in your home directory:
+1. Clone this repository and execute installation bash script:
 
 ```bash
-cd ~
 git clone git://github.com/dmbarreiro/dotfiles
-cp dotfiles/.* .
-rm -rf dotfiles/
+sh dotfiles/install.sh
 ``` 
 
 2. Install [Tmux Plugin Manager](github.com/tmux-plugins/tpm):
@@ -30,3 +28,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 That's it, you just have to install plugins using the plugin managers.
 
+## Update configuration
+
+Just pull the last version from the repository and execute again install.sh.
