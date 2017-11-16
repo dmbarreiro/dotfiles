@@ -8,7 +8,7 @@ let mapleader=","
 nnoremap ; :
 
 " Adding some commands to edit and source this file
-nmap <Leader>1 :e $HOME/.vim/vimrc<CR>
+nmap <Leader>1 :e $MYVIMRC<CR>
 nmap <Leader>so :so %<CR>
 
 " load plugins with vim-plug
@@ -55,6 +55,8 @@ set comments=sl:/*,mb:\ *,elx:\ */
 " open split panes to right and bottom
 set splitbelow
 set splitright
+" at least line below and above the cursor
+set scrolloff=1
 
 " Install OmniCppComplete like described on http://vim.wikia.com/wiki/C++_code_completion
 " This offers intelligent C++ completion when typing ‘.’ ‘->’ or <C-o>
