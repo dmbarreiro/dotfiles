@@ -24,3 +24,27 @@ Plug 'benmills/vimux'
 
 " Easy comments
 Plug 'scrooloose/nerdcommenter'
+
+" Snipmate dependencies
+Plug 'marcweber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+
+" Textual snippets
+Plug 'garbas/vim-snipmate'
+
+" Vim insert mode completions with Tab
+Plug 'ervandew/supertab'
+
+" Highlights trailing whitespace in red
+" :FixWhitespace to fix it
+Plug 'bronson/vim-trailing-whitespace'
+
+" Ack for vim
+Plug 'mileszs/ack.vim'
+
+" Syntax checking
+Plug 'vim-syntastic/syntastic'
+    let g:syntastic_mode_map = {"mode": "pasive"}
+
+" Useful status bar
+Plug 'vim-airline/vim-airline'
