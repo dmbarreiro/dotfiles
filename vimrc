@@ -23,6 +23,8 @@ call plug#end()
 set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
+" always show status line
+set laststatus=2
 " enable search pattern highlighting
 set hlsearch
 " disable vi compatibility (emulation of old bugs)
@@ -79,8 +81,22 @@ noremap <S-h> gT
 " save the file
 nnoremap <Leader>s :w<CR>
 inoremap <Leader>s <ESC>:w<CR>i
-" closes file 
+" Words to upper/lowercase
+nnoremap <Leader>u gUaw
+nnoremap <Leader>l guaw
+" Capitalize first char o a word
+"nnoremap <Leader>U guaweb~
+" Invert first char of a word
+nnoremap <Leader>I eb~
+" Invert current character lower/uppercasewise
+nnoremap <Leader>i ~
+" Scroll half page up or down
+nnoremap <C-j> <C-d>
+nnoremap <C-k> <C-u>
+" closes file
 noremap <Leader>q :q<CR>
+" toggle paste mode
+set pastetoggle=<F2>
 " switch between header/source with F4
 noremap <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 " recreate tags file with F5
@@ -95,6 +111,8 @@ noremap <S-F7> :make clean all<CR>
 noremap <F12> <C-]>
 " open NERDTree
 noremap <C-n> :NERDTreeToggle<CR>
+" normal map of Ack
+nnoremap <Leader>a :Ack<Space>
 " jj is Esc key to leave insert mode
 inoremap jj <Esc>
 " vv creates new vertical split in normal mode
