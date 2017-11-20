@@ -2,10 +2,11 @@
 
 Personal configuration files for development in Linux. Copied stuff from [Justin Donaldson](https://github.com/jdonaldson/dotfiles), [Gerhard Gappmeier](https://github.com/gergap/vim) and few shorcuts I found spread around the Internet. There is not much in here yet, since it is mainly intended to be simple as base for mastering tools like vim and tmux but it will probably grow over time.
 
-## Manual Installation
+## Automated Installation
 
-I recomend you backup your current ~/.vimrc and ~/.tmux.conf files before
-starting the installation process.
+This installation method removes your previous configurations
+so I recomend you backup your current ~/.vimrc, ~/.tmux.conf and
+~/.inputrc files before starting the installation process.
 
 Clone repository and execute installation script:
 
@@ -17,9 +18,6 @@ sh dotfiles/install_complete.sh
 Install plugins using the plugin managers.
 
 ## Manual Installation
-
-I recomend you backup your current ~/.vimrc and ~/.tmux.conf files before
-starting the installation process.
 
 1. Clone this repository:
 
@@ -39,11 +37,15 @@ source /path/dotfiles/vimrc
 source-file /path/dotfiles/tmux.conf
 ``` 
 
+.inputrc
+``` 
+$include /path/dotfiles/inputrc
+``` 
+
 3. Copy configuration files to their expected locations:
 
 ```bash
 cp /path/dotfiles/plugins.vim ~/.plugins.vim
-cp /path/dotfiles/inputrc ~/.inputrc
 ``` 
 
 4. Install [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm):
@@ -63,7 +65,7 @@ Install plugins using the plugin managers.
 
 ## Update configuration
 
-Just pull the last version from the repository and execute the 
+Just pull the last version from the repository and execute the
 installation process.
 
 
