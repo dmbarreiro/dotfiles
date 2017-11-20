@@ -43,6 +43,7 @@ source-file /path/dotfiles/tmux.conf
 
 ```bash
 cp /path/dotfiles/plugins.vim ~/.plugins.vim
+cp /path/dotfiles/inputrc ~/.inputrc
 ``` 
 
 4. Install [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm):
