@@ -1,0 +1,15 @@
+
+set editing-mode vi
+# Show all completions as soon as I press tab
+set show-all-if-ambiguous on
+set completion-ignore-case on
+#set keymap vi
+set keymap vi-command
+# Mappings below apply to command mode
+
+set keymap vi-insert
+# Mappings below apply to insert mode
+",j": vi-movement-mode
+
+# Two escapes clear command line
+",dd": "\C-u"
