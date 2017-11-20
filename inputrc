@@ -1,5 +1,7 @@
 
 set editing-mode vi
+# Change prompt depending on current mode
+set show-mode-in-prompt on
 # Show all completions as soon as I press tab
 set show-all-if-ambiguous on
 set completion-ignore-case on
@@ -7,9 +9,19 @@ set completion-ignore-case on
 set keymap vi-command
 # Mappings below apply to command mode
 
+# Delete from cursor till end of word
+#",x": "cw"
+#",z": "\C-w"
+
+# Clear screen
+"\C-l": clear-screen
+
 set keymap vi-insert
 # Mappings below apply to insert mode
-",j": vi-movement-mode
 
-# Two escapes clear command line
+# Go to normal mode
+",j": vi-movement-mode
+# Clear line, not fully working
 ",dd": "\C-u"
+# Clear screen
+"\C-l": clear-screen
