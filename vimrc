@@ -88,12 +88,23 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 " delete line from insert mode
 inoremap <Leader>dd <ESC>ddi
+" delete line from cursor insert mode
+inoremap <Leader>D <ESC>DA
+" delete line till cursor insert mode
+inoremap <Leader>b <ESC>d^i
+nnoremap <Leader>b d^
+" delete word
+inoremap <Leader>f <ESC>ciw
+nnoremap <Leader>f daw
 " delete from cursor to end of word
 inoremap <Leader>x <ESC>ldEi
 nnoremap <Leader>x dE
+" delete till cursor
+inoremap <Leader>z <C-w>
+nnoremap <Leader>z i<C-W><ESC>l
 " save the file
 nnoremap <Leader>w :w<CR>
-inoremap <Leader>w <ESC>:w<CR>li
+inoremap <Leader>w <ESC>:w<CR>a
 " Words to upper/lowercase
 nnoremap <Leader>u gUaw
 nnoremap <Leader>l guaw
