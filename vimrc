@@ -78,9 +78,19 @@ vnoremap <space> /
 " tab navigation
 noremap <S-l> gt
 noremap <S-h> gT
+" Scroll half page up or down
+nnoremap <S-j> <C-d>
+nnoremap <S-k> <C-u>
+" Easier split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+" delete line from insert mode
+inoremap <Leader>dd <ESC>ddi
 " save the file
-nnoremap <Leader>s :w<CR>
-inoremap <Leader>s <ESC>:w<CR>i
+nnoremap <Leader>w :w<CR>
+inoremap <Leader>w <ESC>:w<CR>i
 " Words to upper/lowercase
 nnoremap <Leader>u gUaw
 nnoremap <Leader>l guaw
@@ -90,9 +100,6 @@ nnoremap <Leader>l guaw
 nnoremap <Leader>I eb~
 " Invert current character lower/uppercasewise
 nnoremap <Leader>i ~
-" Scroll half page up or down
-nnoremap <C-j> <C-d>
-nnoremap <C-k> <C-u>
 " closes file
 noremap <Leader>q :q<CR>
 " toggle paste mode
@@ -113,12 +120,12 @@ noremap <F12> <C-]>
 noremap <C-n> :NERDTreeToggle<CR>
 " normal map of Ack
 nnoremap <Leader>a :Ack<Space>
-" jj is Esc key to leave insert mode
-inoremap jj <Esc>
-" vv creates new vertical split in normal mode
-nnoremap <silent> vv <C-w>v
-" vs creates new horizontal split in normal mode
-nnoremap <silent> vs <C-w>s
+" <Leader>j is Esc key to leave insert mode
+inoremap <Leader>j <Esc>
+" <Leader>v creates new vertical split in normal mode
+nnoremap <silent> <Leader>v <C-w>v
+" <Leader>s creates new horizontal split in normal mode
+nnoremap <silent> <Leader>s <C-w>s
 " in diff mode we use the spell check keys for merging
 if &diff
   ” diff settings
