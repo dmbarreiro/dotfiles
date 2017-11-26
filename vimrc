@@ -2,6 +2,14 @@
 " Description: Optimized for C/C++ development and some personal shortcuts.
 " Inspired by: Gerhard Gappmeier Vim configuration
 "              Justin Donaldson Vim configuration
+" 
+" For Neovim specific configuration
+" if has("nvim")
+" 	...
+" endif
+"
+
+
 
 " <Leader> key is , and ; is : in normal mode
 let mapleader=","
