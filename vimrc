@@ -19,13 +19,15 @@ nnoremap ; :
 nmap <Leader>1 :e $MYVIMRC<CR>
 nmap <Leader>so :so %<CR>
 
+if !has("nvim")
 " load plugins with vim-plug
-call plug#begin('~/.vim/bundle')
+	call plug#begin('~/.vim/bundle')
 
-" plugin configs stored on a separate file
- source ~/.plugins.vim
+		" plugin configs stored on a separate file
+		source ~/.plugins.vim
 
-call plug#end()
+	call plug#end()
+endif
 
 " set UTF-8 encoding
 set enc=utf-8
@@ -54,8 +56,10 @@ set linebreak
 set nolist
 " turn syntax highlighting on
 syntax on
-" Solarized font configuration
-colorscheme solarized
+if !has("nvim")
+	" Solarized font configuration
+	colorscheme solarized
+endif
 " turn line numbers on
 set number
 " highlight matching braces
@@ -122,8 +126,10 @@ nnoremap <Leader>l guaw
 nnoremap <Leader>I eb~
 " Invert current character lower/uppercasewise
 nnoremap <Leader>i ~
-" closes file
-noremap <Leader>q :q<CR>
+" closes file saving
+nnoremap <Leader>q :wq<CR>
+" closes file without saving
+nnoremap <Leader>qz :q!<CR>
 " toggle paste mode
 set pastetoggle=<F2>
 " switch between header/source with F4
