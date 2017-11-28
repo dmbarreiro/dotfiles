@@ -107,6 +107,9 @@ let g:DoxygenToolkit_authorName="John Doe <john@doe.com>"
 "
 nnoremap <space> /
 vnoremap <space> /
+" Add newline w/o insert
+" Enter/Carriage Return for following line
+nnoremap <CR> o<Esc>
 " tab navigation
 noremap <S-l> gt
 noremap <S-h> gT
