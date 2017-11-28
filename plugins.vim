@@ -51,3 +51,6 @@ Plug 'vim-airline/vim-airline'
 
 " Fuzzy file finder
 Plug 'kien/ctrlp.vim'
+
+" Vim easy motion
+Plug 'easymotion/vim-easymotion'
