@@ -8,8 +8,25 @@
 " 	...
 " endif
 "
+" nvim in windows uses folder
+" ~\AppData\Local\nvim\ 
+"
+" vim in linux uses
+" ~/.vim/
+"
 
-
+"Windows specific
+"Modify g:vimpath if your path to vim folder is different
+if has("win32") || has("win64")
+    " use nvim in windows
+    let g:vimpath = '~\AppData\Local\nvim\'
+elseif has("unix")
+    " use vim-athena in linux
+    let g:vimpath = '~/.vim/'
+else
+    "wild guess"
+    let g:vimpath = '~/.vim/'
+endif
 
 " <Leader> key is , and ; is : in normal mode
 let mapleader=","
@@ -19,15 +36,13 @@ nnoremap ; :
 nmap <Leader>1 :e $MYVIMRC<CR>
 nmap <Leader>so :so %<CR>
 
-if !has("nvim")
 " load plugins with vim-plug
-	call plug#begin('~/.vim/bundle')
+call plug#begin(g:vimpath . 'bundle')
 
-		" plugin configs stored on a separate file
-		source ~/.plugins.vim
+    " plugin configs stored on a separate file
+    source plugins.vim
 
-	call plug#end()
-endif
+call plug#end()
 
 " set UTF-8 encoding
 set enc=utf-8
@@ -56,10 +71,8 @@ set linebreak
 set nolist
 " turn syntax highlighting on
 syntax on
-if !has("nvim")
-	" Solarized font configuration
-	colorscheme solarized
-endif
+" Solarized font configuration
+colorscheme solarized
 " turn line numbers on
 set number
 " highlight matching braces
