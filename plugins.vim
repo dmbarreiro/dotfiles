@@ -48,3 +48,6 @@ Plug 'vim-syntastic/syntastic'
 
 " Useful status bar
 Plug 'vim-airline/vim-airline'
+
+" Fuzzy file finder
+Plug 'kien/ctrlp.vim'
