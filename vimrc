@@ -46,13 +46,22 @@ nmap <Leader>so :so %<CR>
 " Type a comma faster in insert mode
 inoremap <Leader><Space> ,
 
-" load plugins with vim-plug
-call plug#begin(g:vimpath . 'bundle')
+" Capturing error when loading plugins
+if v:version >= 700 " try catch only work for vim +7
+    try
+        " load plugins with vim-plug
+        call plug#begin(g:vimpath . 'bundle')
 
-    " plugin configs file in the same directory
-    exec 'source' g:local_path . g:so_slash . 'plugins.vim'
+            " plugin configs file in the same directory
+            exec 'source' g:local_path . g:so_slash . 'plugins.vim'
 
-call plug#end()
+        call plug#end()
+    catch
+        echom "Warning: Problem loading plugins with vim-plug."
+    endtry
+else
+    echom "Warning: Update your VIm to version +7"
+endif
 
 " Changing CtrlP plugin mappigs
 let g:ctrlp_map = '<C-p>'
@@ -86,8 +95,14 @@ set nolist
 " turn syntax highlighting on
 syntax on
 " Solarized font configuration
-if exists('g:solarized_termcolors')
-	colorscheme solarized
+if v:version >= 700 " try catch only work for vim +7
+    try
+        colorscheme solarized
+    catch
+        echom "Warning: Solarized colorscheme not present."
+    endtry
+else
+    echom "Warning: Update your VIm to version +7"
 endif
 " turn line numbers on
 set number
