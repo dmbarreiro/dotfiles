@@ -30,7 +30,8 @@ endif
 
 " <Leader> key is , and ; is : in normal mode
 let mapleader=","
-nnoremap ; :
+"nnoremap ; :
+nmap ; :
 
 " Adding some commands to edit and source this file
 nmap <Leader>1 :e $MYVIMRC<CR>
@@ -127,9 +128,6 @@ nnoremap <Leader>x dE
 " delete till cursor
 inoremap <Leader>z <C-w>
 nnoremap <Leader>z i<C-W><ESC>l
-" save the file
-nnoremap <Leader>w :w<CR>
-inoremap <Leader>w <ESC>:w<CR>a
 " Words to upper/lowercase
 nnoremap <Leader>u gUaw
 nnoremap <Leader>l guaw
@@ -139,10 +137,12 @@ nnoremap <Leader>l guaw
 nnoremap <Leader>I eb~
 " Invert current character lower/uppercasewise
 nnoremap <Leader>i ~
-" closes file saving
-nnoremap <Leader>q :wq<CR>
+" saves file
+nnoremap :w :w<CR>
 " closes file without saving
-nnoremap <Leader>qz :q!<CR>
+nnoremap :q :q<CR>
+" closes file without saving
+nnoremap :qz :q!<CR>
 " toggle paste mode
 set pastetoggle=<F2>
 " switch between header/source with F4
