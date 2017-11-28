@@ -2,7 +2,7 @@
 " Description: Optimized for C/C++ development and some personal shortcuts.
 " Inspired by: Gerhard Gappmeier Vim configuration
 "              Justin Donaldson Vim configuration
-" 
+"
 " For Neovim specific configuration
 " if has("nvim")
 " 	...
@@ -36,6 +36,8 @@ nmap ; :
 " Adding some commands to edit and source this file
 nmap <Leader>1 :e $MYVIMRC<CR>
 nmap <Leader>so :so %<CR>
+" Type a comma faster in insert mode
+inoremap <Leader><Space> ,
 
 " load plugins with vim-plug
 call plug#begin(g:vimpath . 'bundle')
@@ -44,6 +46,10 @@ call plug#begin(g:vimpath . 'bundle')
     source plugins.vim
 
 call plug#end()
+
+" Changing CtrlP plugin mappigs
+let g:ctrlp_map = '<C-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 " set UTF-8 encoding
 set enc=utf-8
