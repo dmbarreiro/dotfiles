@@ -15,17 +15,24 @@
 " ~/.vim/
 "
 
+" Current file path
+" Useful since this file will be sourced
+let g:local_path = expand('<sfile>:p:h')
+
 "Windows specific
 "Modify g:vimpath if your path to vim folder is different
 if has("win32") || has("win64")
     " use nvim in windows
     let g:vimpath = '~\AppData\Local\nvim\'
+    let g:so_slash = '\'
 elseif has("unix")
     " use vim-athena in linux
     let g:vimpath = '~/.vim/'
+    let g:so_slash = '/'
 else
     "wild guess"
     let g:vimpath = '~/.vim/'
+    let g:so_slash = '/'
 endif
 
 " <Leader> key is , and ; is : in normal mode
@@ -42,8 +49,8 @@ inoremap <Leader><Space> ,
 " load plugins with vim-plug
 call plug#begin(g:vimpath . 'bundle')
 
-    " plugin configs stored on a separate file
-    source plugins.vim
+    " plugin configs file in the same directory
+    exec 'source' g:local_path . g:so_slash . 'plugins.vim'
 
 call plug#end()
 
