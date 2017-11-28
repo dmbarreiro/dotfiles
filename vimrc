@@ -86,7 +86,9 @@ set nolist
 " turn syntax highlighting on
 syntax on
 " Solarized font configuration
-colorscheme solarized
+if exists('g:solarized_termcolors')
+	colorscheme solarized
+endif
 " turn line numbers on
 set number
 " highlight matching braces
