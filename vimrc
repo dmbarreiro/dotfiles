@@ -47,7 +47,7 @@ nmap <Leader>so :so %<CR>
 inoremap <Leader><Space> ,
 
 " Capturing error when loading plugins
-if v:version >= 700 " try catch only work for vim +7
+if v:version >= 700 " try catch only work for vim 7+
     try
         " load plugins with vim-plug
         call plug#begin(g:vimpath . 'bundle')
@@ -60,7 +60,7 @@ if v:version >= 700 " try catch only work for vim +7
         echom "Warning: Problem loading plugins with vim-plug."
     endtry
 else
-    echom "Warning: Update your VIm to version +7"
+    echom "Warning: Update your VIm to version 7+"
 endif
 
 " Changing CtrlP plugin mappigs
@@ -95,14 +95,14 @@ set nolist
 " turn syntax highlighting on
 syntax on
 " Solarized font configuration
-if v:version >= 700 " try catch only work for vim +7
+if v:version >= 700 " try catch only work for vim 7+
     try
         colorscheme solarized
     catch
         echom "Warning: Solarized colorscheme not present."
     endtry
 else
-    echom "Warning: Update your VIm to version +7"
+    echom "Warning: Update your VIm to version 7+"
 endif
 " turn line numbers on
 set number
