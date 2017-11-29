@@ -66,6 +66,11 @@ Plug 'tpope/vim-fugitive'
 
 " Tag management
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'majutsushi/tagbar'
 
 " AutoComplete
 Plug 'ajh17/VimCompletesMe'
+
+" Simplify doxygen documentation for C,C++ and python
+Plug 'vim-scripts/DoxygenToolkit.vim'
+    let g:DoxygenToolkit_authorName="John Doe <john@doe.com>"

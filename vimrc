@@ -64,6 +64,18 @@ else
     echom "Warning: Plugins not loaded, update your VIm to version 7+"
 endif
 
+" Plugin maps
+
+" CtrlP
+nnoremap <Leader>. :CtrlPTag<CR>
+" Tagbar
+nnoremap <silent> <Leader>c :TagbarToggle<CR>
+" open NERDTree
+noremap <C-n> :NERDTreeToggle<CR>
+" normal map of Ack
+nnoremap <Leader>a :Ack<Space>
+
+" End Plugin maps
 
 " set UTF-8 encoding
 set enc=utf-8
@@ -83,7 +95,7 @@ set smartindent
 set tabstop=4        " tab width is 4 spaces
 set shiftwidth=4     " indent also with 4 spaces
 set expandtab        " expand tabs to spaces
-" wrap lines at 80 chars.
+" wrap lines at 80 chars
 set textwidth=80
 " Visaully wrap w/o actual line break
 set wrap
@@ -123,8 +135,6 @@ set tags+=~/.vim/tags/gl
 set tags+=~/.vim/tags/sdl
 set tags+=~/.vim/tags/qt4
 
-" Install DoxygenToolkit from http://www.vim.org/scripts/script.php?script_id=987
-let g:DoxygenToolkit_authorName="John Doe <john@doe.com>"
 
 " Enhanced keyboard mappings
 "
@@ -148,7 +158,7 @@ nnoremap <C-H> <C-W><C-H>
 inoremap <Leader>dd <ESC>ddi
 " delete line from cursor insert mode
 inoremap <Leader>D <ESC>DA
-" delete line till cursor insert mode
+" delete line till cursor insert/normal mode
 inoremap <Leader>b <ESC>d^i
 nnoremap <Leader>b d^
 " delete word
@@ -189,10 +199,6 @@ noremap <F7> :make<CR>
 noremap <S-F7> :make clean all<CR>
 " goto definition with F12
 noremap <F12> <C-]>
-" open NERDTree
-noremap <C-n> :NERDTreeToggle<CR>
-" normal map of Ack
-nnoremap <Leader>a :Ack<Space>
 " <Leader>j is Esc key to leave insert mode
 inoremap <Leader>j <Esc>
 " <Leader>v creates new vertical split in normal mode
