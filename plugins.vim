@@ -51,6 +51,21 @@ Plug 'vim-airline/vim-airline'
 
 " Fuzzy file finder
 Plug 'kien/ctrlp.vim'
+    " Changing CtrlP plugin mappigs
+    let g:ctrlp_map = '<C-p>'
+    let g:ctrlp_cmd = 'CtrlP'
 
 " Vim easy motion
 Plug 'easymotion/vim-easymotion'
+
+" Quoting/parenthesizing made simple
+Plug 'tpope/vim-surround'
+
+" Git wrapper
+Plug 'tpope/vim-fugitive'
+
+" Tag management
+Plug 'ludovicchabant/vim-gutentags'
+
+" AutoComplete
+Plug 'ajh17/VimCompletesMe'

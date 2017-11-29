@@ -17,22 +17,22 @@
 
 " Current file path
 " Useful since this file will be sourced
-let g:local_path = expand('<sfile>:p:h')
+let $LOCAL_PATH = expand('<sfile>:p:h')
 
 "Windows specific
 "Modify g:vimpath if your path to vim folder is different
 if has("win32") || has("win64")
     " use nvim in windows
     let g:vimpath = '~\AppData\Local\nvim\'
-    let g:so_slash = '\'
+    let $SO_SLASH = '\'
 elseif has("unix")
     " use vim-athena in linux
     let g:vimpath = '~/.vim/'
-    let g:so_slash = '/'
+    let $SO_SLASH = '/'
 else
     "wild guess"
     let g:vimpath = '~/.vim/'
-    let g:so_slash = '/'
+    let $SO_SLASH = '/'
 endif
 
 " <Leader> key is , and ; is : in normal mode
@@ -53,19 +53,17 @@ if v:version >= 700 " try catch only work for vim 7+
         call plug#begin(g:vimpath . 'bundle')
 
             " plugin configs file in the same directory
-            exec 'source' g:local_path . g:so_slash . 'plugins.vim'
+            exec "source " . $LOCAL_PATH . $SO_SLASH . "plugins.vim"
 
         call plug#end()
     catch
         echom "Warning: Problem loading plugins with vim-plug."
+        echom v:exception
     endtry
 else
-    echom "Warning: Update your VIm to version 7+"
+    echom "Warning: Plugins not loaded, update your VIm to version 7+"
 endif
 
-" Changing CtrlP plugin mappigs
-let g:ctrlp_map = '<C-p>'
-let g:ctrlp_cmd = 'CtrlP'
 
 " set UTF-8 encoding
 set enc=utf-8
@@ -100,6 +98,7 @@ if v:version >= 700 " try catch only work for vim 7+
         colorscheme solarized
     catch
         echom "Warning: Solarized colorscheme not present."
+        echom v:exception
     endtry
 else
     echom "Warning: Update your VIm to version 7+"
