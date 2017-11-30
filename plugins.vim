@@ -65,7 +65,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 
 " Tag management
-Plug 'ludovicchabant/vim-gutentags'
+"Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 
 " AutoComplete
