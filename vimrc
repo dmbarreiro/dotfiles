@@ -196,6 +196,10 @@ nnoremap :q :q<CR>
 nnoremap :qz :q!<CR>
 " toggle paste mode
 set pastetoggle=<F2>
+" Copy to clipboard
+noremap <Leader>y "*y
+" Paste from clipboard
+noremap <Leader>p "*p
 " switch between header/source with F4
 noremap <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 " recreate tags file with F5
