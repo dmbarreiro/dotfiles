@@ -111,6 +111,10 @@ set wrap
 set linebreak
 " list disables linebreak
 set nolist
+" no linebreaks in newly entered text
+" I think it doesn't work
+set textwidth=0
+set wrapmargin=0
 " turn syntax highlighting on
 syntax on
 " Solarized font configuration
@@ -135,6 +139,8 @@ set splitbelow
 set splitright
 " at least line below and above the cursor
 set scrolloff=1
+" folding options
+set foldmethod=syntax
 
 " Install OmniCppComplete like described on http://vim.wikia.com/wiki/C++_code_completion
 " This offers intelligent C++ completion when typing ‘.’ ‘->’ or <C-o>
@@ -147,6 +153,17 @@ set tags+=~/.vim/tags/qt4
 
 " Enhanced keyboard mappings
 "
+" tab key in normal mode
+nnoremap <Tab> <C-q>>
+if has("win32") || has("win64")
+    nnoremap <Tab> <C-q>>
+elseif has("unix")
+    nnoremap <Tab> <C-v>>
+else
+    "wild guess"
+    nnoremap <Tab> <C-v>>
+endif
+" lazy slash
 nnoremap <Space> /
 vnoremap <Space> /
 " Add newline w/o insert
