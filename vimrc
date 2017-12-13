@@ -83,6 +83,7 @@ nnoremap <Leader>a :Ack<Space>
 set hlsearch
 " search for visually selected text
 " \ character no scaped so it will not work
+" DOES NOT WORK WELL YET
 vnoremap <Space><Space> y/\V<C-R>"<CR>
 
 " End Search maps
@@ -102,7 +103,9 @@ set autoindent
 set smartindent
 " configure tabwidth and insert Spaces instead of tabs
 set tabstop=4        " tab width is 4 Spaces
+set softtabstop=4
 set shiftwidth=4     " indent also with 4 Spaces
+set smarttab
 set expandtab        " expand tabs to Spaces
 " wrap lines at 80 chars
 set textwidth=80
