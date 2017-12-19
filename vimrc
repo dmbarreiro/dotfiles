@@ -226,8 +226,10 @@ noremap <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 noremap <F5> :!ctags -R –c++-kinds=+p –fields=+iaS –extra=+q .<CR>
 " create doxygen comment
 noremap <F6> :Dox<CR>
+" execute python
+autocmd FileType python nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<CR>
 " build using makeprg with <F7>
-noremap <F7> :make<CR>
+autocmd FileType cpp,c noremap <buffer> <F7> :make<CR>
 " build using makeprg with <S-F7>
 noremap <S-F7> :make clean all<CR>
 " goto definition with F12
