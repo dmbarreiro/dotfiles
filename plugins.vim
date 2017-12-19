@@ -80,4 +80,4 @@ Plug 'ajh17/VimCompletesMe'
 
 " Simplify doxygen documentation for C,C++ and python
 Plug 'vim-scripts/DoxygenToolkit.vim'
-    let g:DoxygenToolkit_authorName="John Doe <john@doe.com>"
+    let g:DoxygenToolkit_authorName="David Martinez Barreiro <Twitter @hombremultiple>"
