@@ -22,8 +22,7 @@ let $LOCAL_PATH = expand('<sfile>:p:h')
 "Windows specific
 "Modify g:vimpath if your path to vim folder is different
 if has("win32") || has("win64")
-    " use nvim in windows
-    let g:vimpath = '~\AppData\Local\nvim\'
+	let g:vimpath = $VIMRUNTIME
     let $SO_SLASH = '\'
 elseif has("unix")
     " use vim-athena in linux
@@ -50,7 +49,7 @@ inoremap <Leader><Space> ,
 if v:version >= 700 " try catch only work for vim 7+
     try
         " load plugins with vim-plug
-        call plug#begin(g:vimpath . 'bundle')
+        call plug#begin(g:vimpath . $SO_SLASH . 'bundle')
 
             " plugin configs file in the same directory
             exec "source " . $LOCAL_PATH . $SO_SLASH . "plugins.vim"
@@ -99,8 +98,6 @@ set laststatus=2
 set nocompatible
 " use indentation of previous line
 set autoindent
-" use intelligent indentation for C
-set smartindent
 " configure tabwidth and insert Spaces instead of tabs
 set tabstop=4        " tab width is 4 Spaces
 set softtabstop=4
@@ -135,24 +132,11 @@ endif
 set number
 " highlight matching braces
 set showmatch
-" intelligent comments
-set comments=sl:/*,mb:\ *,elx:\ */
 " open split panes to right and bottom
 set splitbelow
 set splitright
 " at least line below and above the cursor
 set scrolloff=1
-" folding options
-set foldmethod=syntax
-
-" Install OmniCppComplete like described on http://vim.wikia.com/wiki/C++_code_completion
-" This offers intelligent C++ completion when typing ‘.’ ‘->’ or <C-o>
-" Load standard tag files
-set tags+=~/.vim/tags/cpp
-set tags+=~/.vim/tags/gl
-set tags+=~/.vim/tags/sdl
-set tags+=~/.vim/tags/qt4
-
 
 " Enhanced keyboard mappings
 "
@@ -220,39 +204,9 @@ set pastetoggle=<F2>
 noremap <Leader>y "*y
 " Paste from clipboard
 noremap <Leader>p "*p
-" switch between header/source with F4
-noremap <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
-" recreate tags file with F5
-noremap <F5> :!ctags -R –c++-kinds=+p –fields=+iaS –extra=+q .<CR>
-" create doxygen comment
-noremap <F6> :Dox<CR>
-" execute python
-autocmd FileType python nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<CR>
-" build using makeprg with <F7>
-autocmd FileType cpp,c noremap <buffer> <F7> :make<CR>
-" build using makeprg with <S-F7>
-noremap <S-F7> :make clean all<CR>
-" goto definition with F12
-noremap <F12> <C-]>
 " <Leader>j is Esc key to leave insert mode
 inoremap <Leader>j <Esc>
 " <Leader>v creates new vertical split in normal mode
 nnoremap <silent> <Leader>v <C-w>v
 " <Leader>s creates new horizontal split in normal mode
 nnoremap <silent> <Leader>s <C-w>s
-" in diff mode we use the spell check keys for merging
-if &diff
-  ” diff settings
-  noremap <M-Down> ]c
-  noremap <M-Up> [c
-  noremap <M-Left> do
-  noremap <M-Right> dp
-  noremap <F9> :new<CR>:read !svn diff<CR>:set syntax=diff buftype=nofile<CR>gg
-"else
-  " spell settings
-"  :setlocal spell spelllang=en
-  " set the spellfile - folders must exist
-"  set spellfile=~/.vim/spellfile.add
-"  noremap <M-Down> ]s
-"  noremap <M-Up> [s
-endif
