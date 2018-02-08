@@ -63,4 +63,4 @@ source /path/dotfiles/vimrc
 ## Update configuration
 
 Just pull the last version from the repository and update
-the plugins using the plugin managers.
+the plugins using the plugin manager.
