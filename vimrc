@@ -87,7 +87,11 @@ vnoremap <Space><Space> y/\V<C-R>"<CR>
 
 " End Search maps
 
-
+" force vim to source .vimrc if present in
+" working directory but limiting what is
+" possible with secure
+set exrc
+set secure
 " set UTF-8 encoding
 set enc=utf-8
 set fenc=utf-8
@@ -104,17 +108,17 @@ set softtabstop=4
 set shiftwidth=4     " indent also with 4 Spaces
 set smarttab
 set expandtab        " expand tabs to Spaces
-" wrap lines at 80 chars
-set textwidth=80
-" Visaully wrap w/o actual line break
+"" wrap lines at 110 chars
+set textwidth=110
+"" Visaully wrap w/o actual line break
 set wrap
 set linebreak
-" list disables linebreak
+"" list disables linebreak
 set nolist
-" no linebreaks in newly entered text
-" I think it doesn't work
-set textwidth=0
-set wrapmargin=0
+"" no linebreaks in newly entered text
+"" I think it doesn't work
+"set textwidth=0
+"set wrapmargin=0
 " turn syntax highlighting on
 syntax on
 " Solarized font configuration
@@ -210,3 +214,6 @@ inoremap <Leader>j <Esc>
 nnoremap <silent> <Leader>v <C-w>v
 " <Leader>s creates new horizontal split in normal mode
 nnoremap <silent> <Leader>s <C-w>s
+" \ while searching to remove search highlight
+" nohlsearch or noh in short version
+nnoremap <silent> \ :nohlsearch<CR>
