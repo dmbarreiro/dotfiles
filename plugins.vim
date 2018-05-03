@@ -38,12 +38,10 @@ Plug 'kien/ctrlp.vim'
 " Vim easy motion
 Plug 'easymotion/vim-easymotion'
 
-" Git wrapper
-Plug 'tpope/vim-fugitive'
-
 " Simplify doxygen documentation for C,C++ and python
 Plug 'vim-scripts/DoxygenToolkit.vim'
     let g:DoxygenToolkit_authorName="David Martinez Barreiro <Twitter @hombremultiple>"
 
-" Solarized vim-qt
-Plug 'JulioJu/neovim-qt-colors-solarized-truecolor-only'
+" Autocompletion for C family languages
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+
