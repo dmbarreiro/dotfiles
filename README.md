@@ -42,25 +42,14 @@ source-file /path/dotfiles/tmux.conf
 $include /path/dotfiles/inputrc
 ```
 
-## Vim config for Neovim(Windows)
-
-Install [vim-plug](https://github.com/junegunn/vim-plug):
-
-```
-curl -fLo ~\AppData\Local\nvim\autoload\plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
-Install plugins using the plugin manager.
-
-Source repository configurations from your present configuration files:
-
-.vimrc
-```
-source /path/dotfiles/vimrc
-```
-
 ## Update configuration
 
 Just pull the last version from the repository and update
 the plugins using the plugin manager.
+
+## Language specific files
+
+I am adding folders with language specific .vimrc files, if placed in project
+folder these files will be automatically loaded with the specific options for 
+the project language.
+
