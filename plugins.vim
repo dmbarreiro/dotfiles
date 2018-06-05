@@ -45,3 +45,7 @@ Plug 'vim-scripts/DoxygenToolkit.vim'
 " Autocompletion for C family languages
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
+" Static syntax and style checker for Python
+Plug 'nvie/vim-flake8'
+
+

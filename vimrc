@@ -73,6 +73,8 @@ nnoremap <silent> <Leader>c :TagbarToggle<CR>
 noremap <C-n> :NERDTreeToggle<CR>
 " normal map of Ack
 nnoremap <Leader>a :Ack<Space>
+" enable pep8 check every time python file is written
+autocmd BufWritePost *.py call Flake8()
 
 " End Plugin maps
 
@@ -157,9 +159,6 @@ endif
 " lazy slash
 nnoremap <Space> /
 vnoremap <Space> /
-" Add newline w/o insert
-" Enter/Carriage Return for following line
-nnoremap <CR> o<Esc>
 " tab navigation
 noremap <S-l> gt
 noremap <S-h> gT
