@@ -43,5 +43,5 @@ Plug 'vim-scripts/DoxygenToolkit.vim'
     let g:DoxygenToolkit_authorName="David Martinez Barreiro <Twitter @hombremultiple>"
 
 " Autocompletion for C family languages
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
