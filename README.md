@@ -32,6 +32,11 @@ git clone git://github.com/dmbarreiro/dotfiles
 source /path/dotfiles/vimrc
 ```
 
+.zshrc
+```
+source /path/dotfiles/zshrc
+```
+
 .tmux.conf
 ```
 source-file /path/dotfiles/tmux.conf
