@@ -113,3 +113,9 @@ export LANG=en_US.UTF-8
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias envsubst="/usr/local/opt/gettext/bin/envsubst"
+
+# Python
+# set env var PYTHONBREAKPOINT=0 to skip all debug breakpoints
+# example:
+# $ PYTHONBREAKPOINT=0 python3.7 my_code.py
+export PYTHONBREAKPOINT=ipdb.set_trace
