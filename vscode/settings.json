@@ -1,0 +1,28 @@
+{
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "window.zoomLevel": -1,
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "editor.autoClosingQuotes": "always",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "editor.rulers": [80,120],
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#cf0011",
+        "editor.lineHighlightBackground": "#FFFFFF0F",
+        "editor.background": "#000000",
+    },
+    "workbench.editor.enablePreview": false,
+    "files.associations": {
+        "*.yml": "yaml"
+    },
+    "python.languageServer": "Pylance",
+    "python.analysis.extraPaths": [
+        "backend/"
+    ],
+    "workbench.editor.showTabs": true,
+    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+    "terminal.external.linuxExec": "iterm",
+    "terminal.external.osxExec": "Iterm.app",
+    "notebook.kernelProviderAssociations": [
+    
+    ]
+}

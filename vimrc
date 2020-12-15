@@ -52,7 +52,7 @@ if v:version >= 700 " try catch only work for vim 7+
         call plug#begin(g:vimpath . $SO_SLASH . 'bundle')
 
             " plugin configs file in the same directory
-            exec "source " . $LOCAL_PATH . $SO_SLASH . "plugins.vim"
+            exec "source " . $LOCAL_PATH . $SO_SLASH . ".plugins.vim"
 
         call plug#end()
     catch

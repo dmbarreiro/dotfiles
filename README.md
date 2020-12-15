@@ -1,60 +1,89 @@
 # dmbarreiro's dotfiles
 
-Personal configuration files for development in Linux. Copied stuff from [Justin Donaldson](https://github.com/jdonaldson/dotfiles), [Gerhard Gappmeier](https://github.com/gergap/vim) and few shorcuts I found spread around the Internet. There is not much in here yet, since it is mainly intended to be simple as base for mastering tools like vim and tmux but it will probably grow over time.
+Personal configuration files for development in macOS. Copied stuff from [Justin Donaldson](https://github.com/jdonaldson/dotfiles), [Gerhard Gappmeier](https://github.com/gergap/vim). Mainly intended as a backup for my development environment.
 
-## Installation
+## Pre-Installation
 
-1. Install [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm):
+Some programs used in the configuration files need to be installed separately
+
+pyenv
+```
+curl -s -S -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
+```
+
+Install [Iterm2](https://iterm2.com/).
+
+Install [oh-my-zsh](https://ohmyz.sh/#install).
+
+Install oh-my-zsh plugins
+    - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/)
+    - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
+Install [powerlevel10k](https://github.com/romkatv/powerlevel10k) zsh theme:
+
+```
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
+Install [homebrew](https://brew.sh/)
+
+Install vim and tmux:
+
+```
+brew install vim tmux
+```
+
+Install [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm):
 
 ```
 git clone git://github.com/tmux-plugins/tpm ~/.tmux/plugins
 ```
 
-2. Install [vim-plug](https://github.com/junegunn/vim-plug):
+Install [vim-plug](https://github.com/junegunn/vim-plug):
 
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-Install plugins using the plugin managers.
+Install plugins using the plugin manager. For [vim-plug](https://github.com/junegunn/vim-plug) open Vim and type `:PlugInstall`.
 
-3. Clone this repository:
+## Installation
+
+1. Clone this repository:
 
 ```
 git clone git://github.com/dmbarreiro/dotfiles
 ```
 
-4. Source repository configurations from your present configuration files:
+2. Copy repository configurations to your system:
 
-.vimrc
+Vim
 ```
-source /path/dotfiles/vimrc
-```
-
-.zshrc
-```
-source /path/dotfiles/zshrc
+copy <repository path>/plugins.vim ~/.plugins.vim
+copy <repository path>/vimrc ~/.vimrc
 ```
 
-.tmux.conf
+Z shell
 ```
-source-file /path/dotfiles/tmux.conf
+copy <repository path>/zshrc ~/.zshrc
+```
+
+Tmux
+```
+copy <repository path>/tmux.conf ~/.tmux.conf
 ```
 
 .inputrc
 ```
-$include /path/dotfiles/inputrc
+copy <repository path>/inputrc ~/.inputrc
 ```
 
-## Update configuration
+Instead of copying the files you can also source them from your original system files, I try to keep most
+directory references relative to system variables (like $HOME for instance).
 
-Just pull the last version from the repository and update
-the plugins using the plugin manager.
+3. Source the copied configuration files in your terminal (Iterm presumably)
 
-## Language specific files
+## Visual Studio Code settings
 
-I am adding folders with language specific .vimrc files, if placed in project
-folder these files will be automatically loaded with the specific options for 
-the project language.
-
+`vscode/` contains Visual Studio Code user seetings. Check the **README** file on that folder for more information.
