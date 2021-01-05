@@ -24,5 +24,11 @@
     "terminal.external.osxExec": "Iterm.app",
     "notebook.kernelProviderAssociations": [
     
-    ]
+    ],
+    "[typescript]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "editor.formatOnSave": true
 }
