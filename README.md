@@ -5,10 +5,21 @@ Personal configuration files for development in macOS. Copied stuff from [Justin
 ## Pre-Installation
 
 Some programs used in the configuration files need to be installed separately
+*(We assume [Python 3](https://www.python.org) and [Node.js](https://nodejs.org) are installed on your system)*
 
 pyenv
 ```
 curl -s -S -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
+```
+
+nvm
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+```
+
+yvm
+```
+curl -s https://raw.githubusercontent.com/tophat/yvm/master/scripts/install.js | node
 ```
 
 Install [Iterm2](https://iterm2.com/).
