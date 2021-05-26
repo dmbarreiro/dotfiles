@@ -50,6 +50,8 @@ Install [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm):
 git clone git://github.com/tmux-plugins/tpm ~/.tmux/plugins
 ```
 
+Install [direnv](https://github.com/direnv/direnv).
+
 Install [vim-plug](https://github.com/junegunn/vim-plug):
 
 ```
@@ -78,6 +80,7 @@ copy <repository path>/vimrc ~/.vimrc
 Z shell
 ```
 copy <repository path>/zshrc ~/.zshrc
+source ~/.zshrc
 ```
 
 Tmux

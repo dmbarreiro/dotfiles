@@ -99,3 +99,6 @@ load-nvmrc
 # yvm (Yarn Version Manager)
 export YVM_DIR=/Users/dmbarreiro/.yvm
 [ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
+
+# direnv (https://github.com/direnv/direnv)
+eval "$(direnv hook zsh)"
